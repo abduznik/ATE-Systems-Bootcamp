@@ -1,0 +1,16 @@
+# Lead Architect Skills (Private/Internal)
+SKILL.md
+
+# Hardware Design
+*.bck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.lck
+fp-info-cache
+
+# Arduino / C++
+build/
+*.pyc
+.vscode/
+.idea/
+.DS_Store
