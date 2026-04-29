@@ -30,6 +30,7 @@ Provide a brief summary of the changes introduced by this PR.
 - [ ] Over-voltage protection verified
 - [ ] Thermal limits checked
 - [ ] Emergency stop/Safe state confirmed
+- [ ] **Common Ground (GND) shared between ESP32 and external rails (12V/5V)**
 
 ## Related Issues
 Fixes #

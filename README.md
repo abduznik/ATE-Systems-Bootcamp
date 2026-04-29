@@ -21,6 +21,11 @@
 * **[Silicon Labs CP210x Driver](https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)** (נפוץ בלוחות פיתוח מקוריים).
 * **[CH340/CH341 USB Driver](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)** (נפוץ בלוחות פיתוח תואמים).
 
+### ספריות Arduino נדרשות (Library Manager):
+יש להתקין את הספריות הבאות דרך ה-Library Manager בתוך ה-Arduino IDE:
+* **ArduinoJson** (לניהול נתונים מורכבים).
+* **SimpleTimer** או שימוש ב-`millis()` (כפי שמתורגל במשימה 05).
+
 ---
 
 ## שלב ב': משימות ה-Bootcamp
