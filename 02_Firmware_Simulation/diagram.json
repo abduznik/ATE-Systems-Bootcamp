@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "author": "ATE Systems Bootcamp",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -60, "left": 100, "attrs": { "color": "red" } },
+    { "type": "wokwi-resistor", "id": "res1", "top": -20, "left": 100, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "esp:GND.1", "led1:C", "black", [] ],
+    [ "led1:A", "res1:2", "red", [] ],
+    [ "res1:1", "esp:D2", "green", [] ]
+  ],
+  "dependencies": {}
+}
