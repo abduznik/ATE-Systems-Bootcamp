@@ -1,11 +1,15 @@
-# Git Basics Exercise
+# משימה 01: יסודות ניהול גרסאות ובקרת תצורה
 
-Welcome to the Git Basics module! This exercise will help you get comfortable with the fundamental Git workflow.
+ניהול גרסאות אינו המלצה, הוא דרישת חובה בכל פרויקט פיתוח מודרני, קל וחומר במערכות קריטיות. מטרת משימה זו היא לשבור את מחסום הפחד משימוש ב-Git ולהקנות לכם הרגלי עבודה נכונים בסביבת צוות.
 
-## Instructions
+## מטרת המשימה
+הוספת שמכם ופרט מידע טריוויה לקובץ רישום הסטודנטים, וסנכרון השינוי לשרת.
 
-1. **Clone the repository**: Use GitHub Desktop to clone this repository to your local machine.
-2. **Open 'students_log.md'**: Navigate to the `01_Git_Basics` folder and open the `students_log.md` file in your favorite text editor.
-3. **Add your information**: Add your name, today's date, and a fun fact about yourself to the table.
-4. **Commit the change**: Save the file and commit your change with a clear and concise message (e.g., "feat: add [Your Name] to students log").
-5. **Push to a new branch**: Push your changes to a new branch named `feat/add-name-[your-name]`.
+## שלבי ביצוע:
+1. התקנת סביבה: ודאו שהתקנתם את תוכנת GitHub Desktop (התקנה זו כוללת בתוכה את מנוע ה-Git באופן אוטומטי ומונעת התעסקות עם שורת הפקודה בשלב זה).
+2. שכפול המאגר (Clone): בצעו Clone למאגר ה-ATE-Systems-Bootcamp אל המחשב המקומי שלכם דרך התוכנה.
+3. עריכת קוד: פתחו את הקובץ `students_log.md` הנמצא בתיקייה זו בעזרת עורך טקסט. הוסיפו שורה חדשה בטבלה עם השם המלא שלכם ופרט טריוויה קצר. שמרו את הקובץ.
+4. תיעוד שינויים (Commit): חזרו ל-GitHub Desktop. תראו שהתוכנה זיהתה שינוי בקובץ. כתבו הודעת Commit קצרה וברורה (לדוגמה: "Added student name to log") ולחצו על Commit.
+5. דחיפת הקוד (Push): לחצו על Push Origin כדי להעלות את השינויים שלכם בחזרה לשרת. 
+
+הצלחתם? סיימתם את המשימה הראשונה והוכחתם שאתם מסוגלים לעבוד בסביבת עבודה משותפת.

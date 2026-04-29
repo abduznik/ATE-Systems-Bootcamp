@@ -1,25 +1,18 @@
-# Hardware Design with KiCad 8
+# משימה 03: תכנון חומרה וסכמות חשמליות (KiCad 8)
 
-This tutorial provides a step-by-step guide for absolute beginners to start their first hardware project in KiCad 8.
+כישורי תכנות אינם מספיקים. מהנדס מערכות נדרש להבין כיצד התוכנה שלו מתממשקת לעולם הפיזי. משימה זו מהווה את טבילת האש שלכם בתוכנת תכנון המעגלים (EDA) הסטנדרטית שלנו.
 
-## Objective
-Create a simple circuit featuring an ESP32 and an LM358 Op-Amp.
+## מטרת המשימה
+שרטוט סכמה חשמלית בסיסית הכוללת בקר מיקרו, מגבר שרת ורכיב פלט, והרצת בדיקת חוקיות חשמלית.
 
-## Step-by-Step Instructions
+## שלבי ביצוע:
+1. פתיחת פרויקט: פתחו את תוכנת KiCad 8 ויצרו פרויקט חדש בתיקייה זו בשם `Hardware_Alpha`.
+2. השמת רכיבים (Schematic Editor): פתחו את עורך הסכמות והוסיפו את הרכיבים הבאים מתוך הספרייה:
+   - בקר: ESP32_DevKit
+   - מגבר שרת: LM358
+   - פלט: LED
+   - נגדים (למגבר השרת ולנורית)
+3. חיווט (Routing): חברו את הפינים הרלוונטיים מה-ESP32 אל כניסות המגבר, ואת מוצא המגבר אל הנורית. אל תשכחו לחבר פסי הזנה (VCC, GND).
+4. בדיקת חוקיות חשמלית (ERC - Electrical Rules Check): הריצו את כלי ה-ERC המובנה בתוכנה.
 
-1. **Create a New Project**: Open KiCad 8, go to `File -> New Project`, and name it `Bootcamp_Design` inside this folder.
-2. **Open Schematic Editor**: Double-click the `.kicad_sch` file.
-3. **Place Components**:
-   - Press `A` to open the symbol chooser.
-   - Search for and place an **ESP32** (e.g., ESP32-WROOM-32).
-   - Search for and place an **LM358** Op-Amp.
-   - Place an **LED** and a **Resistor**.
-4. **Wiring**:
-   - Use the `Wire` tool (`W`) to connect one of the ESP32 GPIOs to the non-inverting input of the LM358.
-   - Connect the output of the LM358 to the LED (don't forget the current-limiting resistor!).
-5. **Electrical Rules Check (ERC)**:
-   - Click the `ERC` icon in the top toolbar.
-   - Run the check and resolve any errors or warnings.
-
-## Why ERC is Critical
-In military and aerospace design, reliability is paramount. The Electrical Rules Check (ERC) is a critical first line of defense. It ensures there are no floating inputs, conflicting drivers (two outputs connected together), or missing power connections. A single wiring error in a flight control system or a missile guidance module can lead to catastrophic mission failure. ERC helps catch these "silly" mistakes before they ever reach the PCB layout or manufacturing stages.
+הערה חשובה: בסביבת פיתוח ציוד בדיקה אלקטרוני, שגיאות ERC (כגון פיני הזנה לא מחוברים או קצרים לוגיים) הן בגדר תקלה קריטית. מטרתכם היא להגיע לדוח ERC נקי לחלוטין (Zero Errors, Zero Warnings). העלו את קבצי הפרויקט המוכנים למאגר.
