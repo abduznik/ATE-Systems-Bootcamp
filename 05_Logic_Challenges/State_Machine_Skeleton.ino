@@ -1,6 +1,11 @@
 /*
  * State Machine Skeleton
- * Task: Implement a 3-state system using millis() for state transitions.
+ * 
+ * Objective: Implement a robust state machine for a testing sequence.
+ * States: 
+ *   - IDLE: Waiting for trigger.
+ *   - TESTING: Running measurement for 3 seconds.
+ *   - RESULT: Displaying outcome (PASS/FAIL).
  */
 
 enum SystemState {
@@ -17,19 +22,21 @@ void setup() {
 }
 
 void loop() {
+  unsigned long currentMillis = millis();
+
   switch (currentState) {
     case IDLE:
-      // TODO: Transition to TESTING if a condition is met
+      // TODO: Check for Serial command or button press to start test
+      // Serial.println("System IDLE. Send 'S' to Start.");
       break;
 
     case TESTING:
-      // TODO: Run test for 5 seconds using millis()
-      // TODO: Transition to RESULT when time is up
+      // TODO: Measure sensor values using non-blocking timer
+      // if (currentMillis - stateStartTime >= 3000) { transition... }
       break;
 
     case RESULT:
-      // TODO: Display Pass/Fail for 2 seconds
-      // TODO: Transition back to IDLE
+      // TODO: Display results for 2 seconds then return to IDLE
       break;
   }
 }

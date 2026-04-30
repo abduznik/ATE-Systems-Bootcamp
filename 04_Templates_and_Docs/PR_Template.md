@@ -1,22 +1,20 @@
-# Pull Request Template
+# Pull Request Checklist
 
 ## Description
-Provide a brief summary of the changes introduced by this PR.
+Summary of the engineering changes introduced.
 
-## Hardware Validation Checklist
-- [ ] **GND Continuity:** All ground planes are connected.
-- [ ] **Power Rails:** No shorts between VCC and GND.
-- [ ] **KiCad 10.0:** Project created/updated using KiCad v10.0.
-- [ ] **PDF Export:** Schematic PDF is attached/located in the `exports` folder.
-- [ ] **Custom Assets:** External footprints/symbols are correctly linked.
+## Hardware Review (KiCad 10.0)
+- [ ] **GND Continuity:** Confirmed common ground across all sheets.
+- [ ] **ERC Clean:** Electrical Rules Check passed with 0 errors.
+- [ ] **Custom Assets:** External footprints/symbols are correctly integrated.
+- [ ] **PDF Export:** Schematic PDF is attached for review.
 
-## Firmware Validation Checklist
-- [ ] **No-Delay Rule:** `millis()` is used for timing; `delay()` is NOT present in the code.
-- [ ] **Baud Rate:** Serial communication set to 115200.
-- [ ] **Documentation:** Code functions are commented in English.
+## Firmware Review (C++ / Arduino)
+- [ ] **No-Delay Policy:** Verified that `millis()` is used for all timing tasks.
+- [ ] **Baud Rate:** Serial communication is synchronized at 115200.
+- [ ] **State Machine:** Logic follows the predefined state flow without blocking.
+- [ ] **Formatting:** Code follows industrial indentation standards and English commenting.
 
-## Visuals
-(Attach screenshots of PCB layout or logic analyzer traces here)
-
-## Reviewer Notes
-(Mention any specific areas you want the architect to focus on)
+## Visuals & Documentation
+- [ ] BOM updated in `04_Templates_and_Docs`.
+- [ ] Logic Analyzer / Serial Monitor screenshots attached (if applicable).

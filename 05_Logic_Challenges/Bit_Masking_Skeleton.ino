@@ -1,18 +1,24 @@
 /*
- * Bit Masking Skeleton
- * Task: Use bitwise operators to control multiple pins via registers.
+ * Bit Masking & Register Control Skeleton
+ * 
+ * Objective: Control ESP32 GPIOs using direct register manipulation for speed.
  */
 
-// Example for AVR (Arduino Uno) or ESP32 equivalent
+// Note: For ESP32, we use GPIO_OUT_REG, GPIO_OUT_W1TS_REG (Set), GPIO_OUT_W1TC_REG (Clear)
+// These are defined in the ESP-IDF / Arduino core.
+
 void setup() {
-  // TODO: Set Pins 2, 3, 4 as OUTPUT using register control
-  // AVR example: DDRD |= (1 << PD2) | (1 << PD3) | (1 << PD4);
+  // TODO: Set GPIO 2 (LED) as output using BIT MASKING
+  // Using standard pinMode for setup is okay, but use registers for loop.
+  pinMode(2, OUTPUT);
 }
 
 void loop() {
-  // TODO: Toggle Pin 2 using XOR (^)
+  // TODO: Toggle GPIO 2 using XOR or specific Set/Clear registers
   
-  // TODO: Check if Pin 5 is HIGH using AND (&) and a mask
+  // Example (Conceptual):
+  // REG_WRITE(GPIO_OUT_W1TS_REG, (1 << 2)); // SET HIGH
+  // REG_WRITE(GPIO_OUT_W1TC_REG, (1 << 2)); // SET LOW
   
-  // TODO: Set Pin 3 HIGH without affecting others using OR (|)
+  // TODO: Implement a mask to check the state of multiple pins at once
 }

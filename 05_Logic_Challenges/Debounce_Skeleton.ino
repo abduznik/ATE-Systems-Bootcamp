@@ -1,13 +1,15 @@
 /*
- * Debounce Skeleton
- * Task: Implement software debounce for a button without using delay().
+ * Software Debounce Skeleton
+ * 
+ * Objective: Read a physical button without using delay() or hardware filters.
  */
 
 const int BUTTON_PIN = 4;
-const unsigned long DEBOUNCE_DELAY = 50; // ms
+const unsigned long DEBOUNCE_DELAY = 50; 
 
-int lastButtonState = LOW;
-unsigned long lastDebounceTime = 0;
+int buttonState;             
+int lastButtonState = LOW;   
+unsigned long lastDebounceTime = 0; 
 
 void setup() {
   pinMode(BUTTON_PIN, INPUT_PULLUP);
@@ -17,14 +19,14 @@ void setup() {
 void loop() {
   int reading = digitalRead(BUTTON_PIN);
 
-  // TODO: Implement logic to update 'buttonState' only after DEBOUNCE_DELAY
-  // Use lastDebounceTime and millis()
+  // TODO: Implement timer-based debounce logic
+  // Check if the switch changed state due to noise or actual press
   
-  if (reading != lastButtonState) {
-    lastDebounceTime = millis();
-  }
+  // if (reading != lastButtonState) { reset timer... }
+  
+  // if (millis() - lastDebounceTime > DEBOUNCE_DELAY) {
+  //    if (reading != buttonState) { update state... }
+  // }
 
-  // TODO: Add code to trigger an event on button press
-  
   lastButtonState = reading;
 }

@@ -1,20 +1,22 @@
 <div dir="rtl">
 
-# 03 - תכנון חומרה (Hardware Design)
+# 03 - תכנון חומרה (Signal Conditioning Module)
 
-שלב זה מתמקד בתכנון מעגל אנלוגי ודיגיטלי משולב תוך שימוש בכלי עריכה מתקדמים.
+המשימה היא תכנון מעגל הממיר אותות מחיישן אנלוגי לרמות מתח המתאימות לכניסת ה-ADC של ה-ESP32, תוך שימוש במגבר שרת LM358.
 
-## המשימה: Signal Conditioning Module
-עליכם לתכנן מעגל המבוסס על ESP32 ועל מגבר שרת LM358 לצורך התמרה של אותות מחיישן אנלוגי.
+## דרישות המערכת
+- **MCU:** ESP32-WROOM-32.
+- **Amplifier:** LM358 (Dual Op-Amp).
+- **Power:** חיבור דרך Power-Jack או USB.
 
-## אתגרים חדשים (KiCad 10.0)
-1. **שימוש בנכסים חיצוניים:** עליכם להוריד Symbol ו-Footprint של מחבר DB9 או Power-Jack מאתר חיצוני (DigiKey / Mouser / SnapMagic) ולשלב אותו בספריית הפרויקט.
-2. **יצירת רכיב מותאם (Custom Symbol):** צרו Symbol חדש עבור מחבר 10-פינים מותאם על סמך Datasheet שתבחרו. יש להקפיד על Pin Numbering ו-Pin Functions נכונים.
-3. **ייצוא תיעוד:** הגשת הפרויקט חייבת לכלול ייצוא של הסכימה לקובץ **PDF** איכותי. סכימה ללא PDF לא תיבדק.
+## אתגרים מתקדמים (Advanced Challenges)
+1. **Sourcing:** הורידו Symbols ו-Footprints של רכיבי Power-Jack או מחבר DB9 מאתרים כגון [DigiKey](https://www.digikey.com) או [Mouser](https://www.mouser.com).
+2. **Custom Library:** צרו רכיב (Symbol) חדש עבור מחבר 10-פינים ייעודי על סמך Datasheet. הקפידו על הגדרת סוג הפינים (Power, Input, Output).
+3. **ERC/DRC:** ודאו שהמעגל עובר את בדיקת החוקיות החשמלית (ERC) ללא שגיאות.
 
-## דרישות תכנון
-- הגדרת Net Classes עבור מתח (Power) ואותות (Signals).
-- הוספת Test Points בנקודות קריטיות (Output of LM358, VCC, GND).
-- שימוש ב-Hierarchical Sheets במידה והמעגל הופך למורכב.
+## הגשה
+הגשת המשימה כוללת:
+- קבצי הפרויקט של KiCad 10.0.
+- ייצוא **PDF** באיכות גבוהה של הסכימה החשמלית (Schematic).
 
 </div>

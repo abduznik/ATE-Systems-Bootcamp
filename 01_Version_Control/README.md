@@ -1,18 +1,18 @@
 <div dir="rtl">
 
-# 01 - ניהול גרסאות (Version Control)
+# 01 - ניהול גרסאות (Git Workflow)
 
-בשלב זה תלמדו לעבוד עם Git בצורה מקצועית. בתעשייה, קוד שלא נמצא ב-Repository לא קיים.
+בתעשיית ה-ATE, ניהול קוד הוא קריטי. כל שינוי חייב להיות מתועד, הדיר (Reproducible) וניתן לשחזור.
 
 ## המשימה
-1. פתחו את התיקייה ב-GitHub Desktop.
-2. צרו Branch חדש בשם `feature/setup-student-name`.
-3. עדכנו את הקובץ `students_log.md` עם הפרטים שלכם.
-4. בצעו Commit ו-Push.
-5. פתחו Pull Request ראשון ב-GitHub.
+1. צרו Branch חדש ב-GitHub Desktop בשם `feature/onboarding-[your-name]`.
+2. עדכנו את הקובץ `students_log.md` בתיקייה זו.
+3. בצעו Commit עם הודעה בפורמט **Conventional Commits**:
+   - `feat: add student details to log`
+4. בצעו Push ופתחו Pull Request (PR) ב-GitHub.
 
 ## דגשים
-- הודעות ה-Commit חייבות להיות באנגלית, ברורות ומתחילות בפועל (לדוגמה: `Add student profile to log`).
-- אין לבצע שינויים ישירות ב-Branch ה-`main`.
+- חובה להשתמש ב-PR Template הנמצא בתיקייה `04_Templates_and_Docs`.
+- אין לבצע Merge ללא אישור מה-Lead Architect.
 
 </div>
