@@ -22,6 +22,6 @@
 
 ## דגשים
 - חובה להשתמש ב-PR Template הנמצא בתיקייה `04_Templates_and_Docs`.
-- אין לבצע Merge ללא אישור מה-Lead Architect.
+- אין לבצע Merge ללא אישור המנחה.
 
 </div>
