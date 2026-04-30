@@ -7,7 +7,7 @@
 ## Quick Start - תחילת עבודה
 1. **התקנה:** ודאו שכל הכלים המופיעים בסעיף ה-Toolchain מותקנים במחשבכם.
 2. **Clone:** שכפלו את ה-Repository הזה למחשבכם באמצעות GitHub Desktop.
-3. **ספרינט:** עקבו אחר לוח הזמנים והתחילו בתיקייה `01_Version_Control`.
+3. **ספרינט:** עקבו אחר לוח הזמנים והתחילו בתיקייה [`01_Version_Control`](./01_Version_Control).
 
 ## Toolchain - כלי עבודה
 כדי לעמוד בסטנדרט התעשייתי, חובה להשתמש בגרסאות הבאות:
@@ -26,11 +26,11 @@
 
 | יום | תיקייה | אבן דרך (Milestone) |
 | :--- | :--- | :--- |
-| 1-2 | `01_Version_Control` | הקמת סביבה, Git Workflow ופתיחת PR ראשון. |
-| 2-3 | `02_Firmware_Simulation` | פיתוח לוגיקה לא-חוסמת בסימולציית Wokwi. |
-| 3-5 | `03_Hardware_Design` | תכנון מלא של Signal Conditioning ב-KiCad 10. |
-| 6 | `05_Logic_Challenges` | אתגרי יעילות קוד, State Machines וניהול אוגרים. |
-| 7 | `04_Templates_and_Docs` | סקירה טכנית (Code Review), תיקונים ומיזוג סופי. |
+| 1-2 | [`01_Version_Control`](./01_Version_Control) | הקמת סביבה, Git Workflow ופתיחת PR ראשון. |
+| 2-3 | [`02_Firmware_Simulation`](./02_Firmware_Simulation) | פיתוח לוגיקה לא-חוסמת בסימולציית Wokwi. |
+| 3-5 | [`03_Hardware_Design`](./03_Hardware_Design) | תכנון מלא של Signal Conditioning ב-KiCad 10. |
+| 6 | [`05_Logic_Challenges`](./05_Logic_Challenges) | אתגרי יעילות קוד, State Machines וניהול אוגרים. |
+| 7 | [`04_Templates_and_Docs`](./04_Templates_and_Docs) | סקירה טכנית (Code Review), תיקונים ומיזוג סופי. |
 
 ## The Rules - חוקי הברזל
 1. **No-Delay Policy:** כל שימוש ב-`delay()` ב-Firmware יביא לפסילה מיידית של הקוד. השתמשו ב-`millis()` בלבד.
