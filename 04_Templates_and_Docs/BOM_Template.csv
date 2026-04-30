@@ -1,3 +1,6 @@
-Item Number,Quantity,Component Type,Part Number (Octopart),Package/Footprint,Notes
-1,1,Microcontroller,ESP32-WROOM-32,SMD Module,Main Controller
-2,1,Operational Amplifier,LM358DR,SOIC-8,Signal Conditioning
+Item,Reference,Value,Footprint,Quantity,LCSC/DigiKey Part Number
+1,U1,ESP32-DevKit-V1,ESP32-WROOM-32,1,
+2,U2,LM358,SOIC-8,1,
+3,C1,100nF,C_0603,2,
+4,R1,10k,R_0603,5,
+5,J1,Power Jack,BARREL_JACK,1,

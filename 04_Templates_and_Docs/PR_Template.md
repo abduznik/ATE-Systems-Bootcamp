@@ -3,34 +3,20 @@
 ## Description
 Provide a brief summary of the changes introduced by this PR.
 
-## Type of Change
-- [ ] Hardware/Schematic Changes
-- [ ] Firmware Updates
-- [ ] Documentation Update
-- [ ] Tooling/Scripting Improvement
+## Hardware Validation Checklist
+- [ ] **GND Continuity:** All ground planes are connected.
+- [ ] **Power Rails:** No shorts between VCC and GND.
+- [ ] **KiCad 10.0:** Project created/updated using KiCad v10.0.
+- [ ] **PDF Export:** Schematic PDF is attached/located in the `exports` folder.
+- [ ] **Custom Assets:** External footprints/symbols are correctly linked.
 
-## Change Details
-### Hardware/Schematic Changes
-- [ ] Symbol/Footprint updated
-- [ ] Netlist changes verified
-- [ ] BOM updated
+## Firmware Validation Checklist
+- [ ] **No-Delay Rule:** `millis()` is used for timing; `delay()` is NOT present in the code.
+- [ ] **Baud Rate:** Serial communication set to 115200.
+- [ ] **Documentation:** Code functions are commented in English.
 
-### Firmware Updates
-- [ ] New feature implemented
-- [ ] Bug fix applied
-- [ ] Driver updated
+## Visuals
+(Attach screenshots of PCB layout or logic analyzer traces here)
 
-## Verification & Safety
-### Test Procedures Performed
-- [ ] Unit tests passed
-- [ ] HIL (Hardware-in-the-Loop) simulation verified
-- [ ] Physical hardware bench test completed
-
-### Safety Interlocks Verified
-- [ ] Over-voltage protection verified
-- [ ] Thermal limits checked
-- [ ] Emergency stop/Safe state confirmed
-- [ ] **Common Ground (GND) shared between ESP32 and external rails (12V/5V)**
-
-## Related Issues
-Fixes #
+## Reviewer Notes
+(Mention any specific areas you want the architect to focus on)

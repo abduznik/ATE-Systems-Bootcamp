@@ -1,30 +1,36 @@
 /*
- * Module 02: Firmware Simulation
- * Blink and Serial Communication Challenge
+ * Project: Blink and Serial Heartbeat
+ * Description: Non-blocking LED blink and Serial message output.
+ * Target: ESP32 / Arduino Generic
+ * Rule: NO DELAY() ALLOWED.
  */
 
-const int LED_PIN = 2; // Default onboard LED for many ESP32 boards
+const int LED_PIN = 2; // Built-in LED on most ESP32 boards
+const unsigned long INTERVAL = 1000; // 1 second
+
+unsigned long lastUpdate = 0;
+bool ledState = false;
 
 void setup() {
-  // Initialize Serial monitor at 115200 baud
-  Serial.begin(115200);
-  
-  // Initialize LED pin as an output
   pinMode(LED_PIN, OUTPUT);
-  
-  Serial.println("System Ready. Challenge: Modify the code to blink ONLY when 'A' is received.");
+  Serial.begin(115200);
+  Serial.println("ATE Bootcamp: Firmware Simulation Started.");
 }
 
 void loop() {
-  /* 
-   * CHALLENGE:
-   * Currently, the LED blinks continuously.
-   * Modify this loop so that the LED blinks once ONLY if 
-   * the character 'A' is received via Serial.read().
-   */
-  
-  digitalWrite(LED_PIN, HIGH);
-  delay(500);
-  digitalWrite(LED_PIN, LOW);
-  delay(500);
+  unsigned long currentMillis = millis();
+
+  // Task: Toggle LED and print heartbeat every 1 second
+  if (currentMillis - lastUpdate >= INTERVAL) {
+    lastUpdate = currentMillis;
+    
+    ledState = !ledState;
+    digitalWrite(LED_PIN, ledState);
+    
+    Serial.print("Heartbeat - System Time: ");
+    Serial.print(currentMillis / 1000);
+    Serial.println("s");
+  }
+
+  // Other tasks can run here without being blocked
 }
