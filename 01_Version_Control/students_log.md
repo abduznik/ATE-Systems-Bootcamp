@@ -2,7 +2,7 @@
 
 | Date | Task ID | Description | Status |
 |------|---------|-------------|--------|
-| 2026-06-28 | 01 | Repository Setup & Version control | In Progress |
+| 2026-06-28 | 01+02+03+04+05 | BOM haven't updated | Done |
 
 ## Notes:
 - Initializing the ATE Bootcamp environment.
